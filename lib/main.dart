@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:z_coin/splash/splash_screen.dart'; // Update with your actual import path
-
+import 'package:z_coin/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

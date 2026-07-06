@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:z_coin/auth/view/pages/landing_screen.dart'; // Update with your actual import path
+import 'package:z_coin/main_navigation.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
       if (mounted) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const LandingScreen()),
+          MaterialPageRoute(builder: (context) => const MainNavigationScreen()),
         );
       }
     });
