@@ -89,7 +89,7 @@ class PortfolioScreen extends StatelessWidget {
                                 ),
                                 SizedBox(height: 5),
                                 Text(
-                                  '₹2,509.76',
+                                  '₹2,000.76',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -120,7 +120,7 @@ class PortfolioScreen extends StatelessWidget {
                                 ),
                                 SizedBox(height: 5),
                                 Text(
-                                  '₹2,509.76',
+                                  '509.76',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -443,7 +443,7 @@ class PortfolioScreen extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
-                          'assets/images/b57ac673f06a4b0338a596817eb0a50ce16e2059f327dc117744449a47915cb2 1.png',
+                          'assets/images/3c5b36c70a05bad40eee4f711aeefbb1809169a17db047bf91f1ef45828349e5 1.png',
                           width: 40,
                           height: 40,
                           fit: BoxFit.cover,
@@ -457,7 +457,7 @@ class PortfolioScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Bitcoin',
+                            'Tron',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
@@ -465,7 +465,7 @@ class PortfolioScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 5),
                           Text(
-                            'BTC',
+                            'TRX',
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.grey[600],
@@ -521,7 +521,7 @@ class PortfolioScreen extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
-                          'assets/images/4113b082d21cc5fab17fc8f2d19fb996165bcce635e6900f7fc2d57c4ef33ae9 1.png',
+                          'assets/images/a55046bc53c5de686bf82a2d9d280b006bd8d2aa1f3bbb4eba28f0c69c7597da 1.png',
                           width: 40,
                           height: 40,
                           fit: BoxFit.cover,
@@ -533,7 +533,7 @@ class PortfolioScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Ethereum',
+                            'Cardano',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
@@ -541,7 +541,7 @@ class PortfolioScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 5),
                           Text(
-                            'ETH',
+                            'ADA',
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.grey[600],
