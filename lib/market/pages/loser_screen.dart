@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:z_coin/market/pages/market_coin_card.dart';
 
 class LoserScreen extends StatelessWidget {
   const LoserScreen({super.key});
@@ -8,38 +9,26 @@ class LoserScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(16.0),
       children: const [
-        _InfoCard(title: 'Top Losers', subtitle: 'Coins that dropped the most'),
+        MarketCoinCard(
+          name: 'Cardano',
+          symbol: 'ADA',
+          price: '₹9.36',
+          change: '-2.81%',
+          imagePath: 'assets/images/a55046bc53c5de686bf82a2d9d280b006bd8d2aa1f3bbb4eba28f0c69c7597da 1.png',
+          chartPath: 'assets/images/Vector 4.png',
+          isPositive: false,
+        ),
         SizedBox(height: 12.0),
-        _InfoCard(title: 'DOGE', subtitle: '-2.81% change'),
-        SizedBox(height: 12.0),
-        _InfoCard(title: 'XRP', subtitle: '-1.92% change'),
+        MarketCoinCard(
+          name: 'Tether',
+          symbol: 'USDT',
+          price: '₹44.12',
+          change: '-1.92%',
+          imagePath: 'assets/images/1f8489bb280fb0a0fd643c1161312ba49655040e9aaaced5f9ad3eeaf868eadc 1.png',
+          chartPath: 'assets/images/Vector 4.png',
+          isPositive: false,
+        ),
       ],
-    );
-  }
-}
-
-class _InfoCard extends StatelessWidget {
-  const _InfoCard({required this.title, required this.subtitle});
-
-  final String title;
-  final String subtitle;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-        color: Colors.red[50],
-        borderRadius: BorderRadius.circular(14.0),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(title, style: const TextStyle(fontWeight: FontWeight.w700)),
-          const SizedBox(height: 4.0),
-          Text(subtitle, style: TextStyle(color: Colors.grey[700])),
-        ],
-      ),
     );
   }
 }

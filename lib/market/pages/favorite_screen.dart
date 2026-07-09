@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:z_coin/market/pages/market_coin_card.dart';
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
@@ -8,46 +9,28 @@ class FavoriteScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(16.0),
       children: const [
-        _FavoriteCard(title: 'Your Favorites', subtitle: 'Coins you saved earlier'),
+        MarketCoinCard(
+          name: 'Bitcoin',
+          symbol: 'BTC',
+          price: '₹2,509.76',
+          change: '+9.77%',
+          imagePath: 'assets/images/b57ac673f06a4b0338a596817eb0a50ce16e2059f327dc117744449a47915cb2 1.png',
+          chartPath: 'assets/images/Vector 2.png',
+          isPositive: true,
+          trailingIcon: Icon(Icons.star, color: Colors.amber, size: 18),
+        ),
         SizedBox(height: 12.0),
-        _FavoriteCard(title: 'BTC', subtitle: 'Bitcoin • Watchlisted'),
-        SizedBox(height: 12.0),
-        _FavoriteCard(title: 'ETH', subtitle: 'Ethereum • Watchlisted'),
+        MarketCoinCard(
+          name: 'Ethereum',
+          symbol: 'ETH',
+          price: '₹1,640.20',
+          change: '-2.10%',
+          imagePath: 'assets/images/4113b082d21cc5fab17fc8f2d19fb996165bcce635e6900f7fc2d57c4ef33ae9 1.png',
+          chartPath: 'assets/images/Vector 4.png',
+          isPositive: false,
+          trailingIcon: Icon(Icons.star, color: Colors.amber, size: 18),
+        ),
       ],
-    );
-  }
-}
-
-class _FavoriteCard extends StatelessWidget {
-  const _FavoriteCard({required this.title, required this.subtitle});
-
-  final String title;
-  final String subtitle;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-        color: Colors.amber[50],
-        borderRadius: BorderRadius.circular(14.0),
-      ),
-      child: Row(
-        children: [
-          const Icon(Icons.star, color: Colors.amber),
-          const SizedBox(width: 12.0),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(title, style: const TextStyle(fontWeight: FontWeight.w700)),
-                const SizedBox(height: 4.0),
-                Text(subtitle, style: TextStyle(color: Colors.grey[700])),
-              ],
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

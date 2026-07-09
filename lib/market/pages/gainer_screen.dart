@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:z_coin/market/pages/market_coin_card.dart';
 
 class GainerScreen extends StatelessWidget {
   const GainerScreen({super.key});
@@ -8,38 +9,26 @@ class GainerScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(16.0),
       children: const [
-        _InfoCard(title: 'Top Gainers', subtitle: 'Most rising coins today'),
+        MarketCoinCard(
+          name: 'Band protocol',
+          symbol: 'Band',
+          price: '₹8,420.34',
+          change: '+4.02%',
+          imagePath: 'assets/images/5014e5a26a574b1a9a32e6d7ccfe8ab106e0c989dfca6aac1c469debbc772730 1.png',
+          chartPath: 'assets/images/Vector 2.png',
+          isPositive: true,
+        ),
         SizedBox(height: 12.0),
-        _InfoCard(title: 'SOL', subtitle: '+4.02% gain'),
-        SizedBox(height: 12.0),
-        _InfoCard(title: 'AVAX', subtitle: '+3.67% gain'),
+        MarketCoinCard(
+          name: 'Tron',
+          symbol: 'TRX',
+          price: '₹3,142.88',
+          change: '+3.67%',
+          imagePath: 'assets/images/3c5b36c70a05bad40eee4f711aeefbb1809169a17db047bf91f1ef45828349e5 1.png',
+          chartPath: 'assets/images/Vector 2.png',
+          isPositive: true,
+        ),
       ],
-    );
-  }
-}
-
-class _InfoCard extends StatelessWidget {
-  const _InfoCard({required this.title, required this.subtitle});
-
-  final String title;
-  final String subtitle;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-        color: Colors.green[50],
-        borderRadius: BorderRadius.circular(14.0),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(title, style: const TextStyle(fontWeight: FontWeight.w700)),
-          const SizedBox(height: 4.0),
-          Text(subtitle, style: TextStyle(color: Colors.grey[700])),
-        ],
-      ),
     );
   }
 }

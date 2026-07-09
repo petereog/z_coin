@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:z_coin/portfolio/deposit_screen.dart';
+import 'package:z_coin/portfolio/withdraw_screen.dart';
 
 class PortfolioScreen extends StatelessWidget {
   const PortfolioScreen({super.key});
@@ -145,7 +147,12 @@ class PortfolioScreen extends StatelessWidget {
                       width: 190,
                       child: ElevatedButton(
                         onPressed: () {
-                          // TODO: Navigate to invest/purchase flow
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const DepositScreen(),
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF0063F5),
@@ -173,7 +180,12 @@ class PortfolioScreen extends StatelessWidget {
                       width: 190,
                       child: ElevatedButton(
                         onPressed: () {
-                          // TODO: Navigate to invest/purchase flow
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const WithdrawScreen(),
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
