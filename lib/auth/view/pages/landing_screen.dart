@@ -63,9 +63,9 @@ class LandingScreen extends StatelessWidget {
 
                         // CTA button — currently no action wired up
                         ElevatedButton(
-                          onPressed: () {
-                            // TODO: Navigate to invest/purchase flow
-                          },
+                          onPressed: () {},
+                        
+                         
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
                             padding: const EdgeInsets.symmetric(
